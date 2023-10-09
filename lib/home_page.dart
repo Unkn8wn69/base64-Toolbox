@@ -1,3 +1,4 @@
+import 'package:Base64_Toolbox/pages/text/decode.dart';
 import 'package:Base64_Toolbox/pages/text/encode.dart';
 import "package:flutter/material.dart";
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -21,9 +22,7 @@ class _HomePageState extends State<HomePage> {
 
   final _pages = [
     TextEncodePage(),
-    Center(
-      child: Text("test"),
-    ),
+    TextDecodePage()
   ];
 
   @override
