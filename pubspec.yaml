@@ -1,4 +1,4 @@
-name: Base64_Toolbox
+name: base64_toolbox
 description: A app to encode and decode everything.
 publish_to: 'none'
 version: 0.1.0
