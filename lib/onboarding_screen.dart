@@ -1,6 +1,6 @@
-import 'package:Base64_Toolbox/home_page.dart';
-import 'package:Base64_Toolbox/intro_pages/intro_page_1.dart';
-import 'package:Base64_Toolbox/intro_pages/intro_page_2.dart';
+import 'package:base64_toolbox/home_page.dart';
+import 'package:base64_toolbox/intro_pages/intro_page_1.dart';
+import 'package:base64_toolbox/intro_pages/intro_page_2.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

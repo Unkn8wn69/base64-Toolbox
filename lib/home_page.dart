@@ -1,5 +1,5 @@
-import 'package:Base64_Toolbox/pages/text/decode.dart';
-import 'package:Base64_Toolbox/pages/text/encode.dart';
+import 'package:base64_toolbox/pages/text/decode.dart';
+import 'package:base64_toolbox/pages/text/encode.dart';
 import "package:flutter/material.dart";
 import 'package:google_nav_bar/google_nav_bar.dart';
 

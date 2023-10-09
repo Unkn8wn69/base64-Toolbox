@@ -1,6 +1,6 @@
-import 'package:Base64_Toolbox/components/input_card.dart';
-import 'package:Base64_Toolbox/components/output_card.dart';
-import 'package:Base64_Toolbox/components/small_outline_button.dart';
+import 'package:base64_toolbox/components/input_card.dart';
+import 'package:base64_toolbox/components/output_card.dart';
+import 'package:base64_toolbox/components/small_outline_button.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import 'dart:convert';

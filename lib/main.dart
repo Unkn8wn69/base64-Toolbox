@@ -1,5 +1,5 @@
-import 'package:Base64_Toolbox/onboarding_screen.dart';
-import 'package:Base64_Toolbox/theme/theme.dart';
+import 'package:base64_toolbox/onboarding_screen.dart';
+import 'package:base64_toolbox/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
