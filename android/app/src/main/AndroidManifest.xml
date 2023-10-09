@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="intro_screen"
+        android:label="Base64 Toolbox"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
