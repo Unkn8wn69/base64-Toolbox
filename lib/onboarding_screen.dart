@@ -3,6 +3,7 @@ import 'package:base64_toolbox/intro_pages/intro_page_1.dart';
 import 'package:base64_toolbox/intro_pages/intro_page_2.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -24,6 +25,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   // button style
 
   TextStyle buttonStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 18);
+
+  Future<void> _completeOnboarding() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('hasOnboardingBeenShown', true);
+  }
 
   @override
   Widget build(BuildContext context){
@@ -61,6 +67,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 onLastPage ?
                 GestureDetector(
                   onTap: () => {
+                    _completeOnboarding(),
                     Navigator.push(context, 
                     MaterialPageRoute(builder: (context) {
                       return HomePage();
