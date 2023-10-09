@@ -2,6 +2,8 @@ import 'package:base64_toolbox/pages/text/decode.dart';
 import 'package:base64_toolbox/pages/text/encode.dart';
 import "package:flutter/material.dart";
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key}) : super(key: key);
@@ -21,17 +23,20 @@ class _HomePageState extends State<HomePage> {
   }
 
   final _pages = [
-    TextEncodePage(),
-    TextDecodePage()
+    const TextEncodePage(),
+    const TextDecodePage()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("BASE64 TOOLBOX", style:  TextStyle(fontWeight: FontWeight.bold, fontSize: 18),)),
+        title: Text("BASE64 TOOLBOX", style:  TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
         automaticallyImplyLeading: false,
         toolbarHeight: 80,
+        actions: <Widget>[
+          IconButton(onPressed: () => launchUrl(Uri.parse("https://github.com/Unkn8wn69/base64-Toolbox"), mode: LaunchMode.externalApplication), icon: Icon(MdiIcons.github))
+        ],
       ),
 
       body: _pages[_selectedIndex],

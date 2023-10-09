@@ -20,7 +20,7 @@ class _TextDecodePageState extends State<TextDecodePage> {
     setState(() { 
       try {
         output = utf8.decode(base64.decode(input));
-      } on Exception catch (error) {
+      } on Exception catch (_) {
         output = "erorr";
       }
     });
