@@ -70,3 +70,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+// kestore
+
+upload-keystore.jks
