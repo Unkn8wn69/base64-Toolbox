@@ -16,7 +16,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   // controller to keep track of what page
 
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   // if on last page
 
@@ -24,7 +24,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   // button style
 
-  TextStyle buttonStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 18);
+  TextStyle buttonStyle = const TextStyle(fontWeight: FontWeight.bold, fontSize: 18);
 
   Future<void> _completeOnboarding() async {
     final prefs = await SharedPreferences.getInstance();
@@ -43,26 +43,26 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               });
             },
             controller: _controller,
-            children: [
+            children: const [
               IntroPage1(),
               IntroPage2(),
           ]),
           Container(
-            alignment: Alignment(0,0.75),
+            alignment: const Alignment(0,0.75),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () => {
                     _controller.previousPage(
-                      duration: Duration(milliseconds: 300), 
+                      duration: const Duration(milliseconds: 300), 
                       curve: Curves.easeIn
                     )
                   },
                   child: Text("back", style: buttonStyle)
                 ),
 
-                SmoothPageIndicator(controller: _controller, count: 2, effect: WormEffect(dotColor: Colors.white54, activeDotColor: Colors.deepPurple)),
+                SmoothPageIndicator(controller: _controller, count: 2, effect: const WormEffect(dotColor: Colors.white54, activeDotColor: Colors.deepPurple)),
 
                 onLastPage ?
                 GestureDetector(
@@ -70,14 +70,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     _completeOnboarding(),
                     Navigator.push(context, 
                     MaterialPageRoute(builder: (context) {
-                      return HomePage();
+                      return const HomePage();
                     }))
                   },
                   child: Text("done",style: buttonStyle)
                 ) : GestureDetector(
                   onTap: () => {
                     _controller.nextPage(
-                      duration: Duration(milliseconds: 300), 
+                      duration: const Duration(milliseconds: 300), 
                       curve: Curves.easeIn
                     )
                   },

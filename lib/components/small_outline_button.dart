@@ -16,16 +16,15 @@ class SmallOutlineButton extends StatelessWidget {
   Widget build(BuildContext context){
     return OutlinedButton(
       onPressed: onPressed,
+      style: OutlinedButton.styleFrom(
+        foregroundColor: Colors.white, side: const BorderSide(color: Colors.white)
+      ),
       child: Row(
         children: [
           icon,
-          SizedBox(width: 5,),
+          const SizedBox(width: 5,),
           Text(text),
         ],
-      ),
-      style: OutlinedButton.styleFrom(
-        primary: Colors.white,
-        side: BorderSide(color: Colors.white)
       ),
     );
   }

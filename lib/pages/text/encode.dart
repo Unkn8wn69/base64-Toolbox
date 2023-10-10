@@ -58,18 +58,18 @@ class _TextEncodePageState extends State<TextEncodePage> {
                   padding: const EdgeInsets.only(top: 20.0, bottom: 20, left: 20),
                   child: Column( // ab column
                     children: [
-                      Container(
+                      SizedBox(
                         height: 40,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            SmallOutlineButton(text: "Copy", icon: Icon(Icons.copy), onPressed: copy),
-                            SmallOutlineButton(text: "Paste", icon: Icon(Icons.paste), onPressed: paste),
-                            SmallOutlineButton(text: "Clear", icon: Icon(Icons.delete_forever), onPressed: clear),
+                            SmallOutlineButton(text: "Copy", icon: const Icon(Icons.copy), onPressed: copy),
+                            SmallOutlineButton(text: "Paste", icon: const Icon(Icons.paste), onPressed: paste),
+                            SmallOutlineButton(text: "Clear", icon: const Icon(Icons.delete_forever), onPressed: clear),
                           ],
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       InputCard(
                       submit: encode,
                       controller: textController,
@@ -83,7 +83,7 @@ class _TextEncodePageState extends State<TextEncodePage> {
                 flex: 1,
                 child: Column(
                   children: [
-                    SizedBox(height: 50,),
+                    const SizedBox(height: 50,),
                     IconButton(
                       highlightColor: Theme.of(context).colorScheme.primary,
                       splashRadius: 25,

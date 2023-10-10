@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BASE64 TOOLBOX", style:  TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+        title: const Text("BASE64 TOOLBOX", style:  TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
         automaticallyImplyLeading: false,
         toolbarHeight: 80,
         actions: <Widget>[
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Theme.of(context).colorScheme.primary,
             color:  Colors.grey[500],
             activeColor: Colors.white,
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
             tabBackgroundColor: Colors.white.withOpacity(0.2),
             style: GnavStyle.google,
             gap: 10,
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               _navigatePage(index);
             },
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            tabs: [
+            tabs: const [
               GButton(icon: Icons.code, text: "Encode",),
               GButton(icon: Icons.code_off, text: "Decode",),
             ],

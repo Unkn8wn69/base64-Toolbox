@@ -18,14 +18,14 @@ class _OutputCardState extends State<OutputCard> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
       ),
-      margin: EdgeInsets.only(top: 25, left: 20, right:20),
+      margin: const EdgeInsets.only(top: 25, left: 20, right:20),
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 5),
         child: SingleChildScrollView(
           child: SelectableText(
             widget.output,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 15),
             )

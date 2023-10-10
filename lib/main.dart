@@ -15,13 +15,13 @@ void main() async {
 class MainApp extends StatelessWidget {
   final bool hasOnboardingBeenShown;
 
-  MainApp({required this.hasOnboardingBeenShown});
+  const MainApp({super.key, required this.hasOnboardingBeenShown});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: hasOnboardingBeenShown ? HomePage() : OnBoardingScreen(),
+      home: hasOnboardingBeenShown ? const HomePage() : const OnBoardingScreen(),
       theme: lightMode,
       darkTheme: darkMode,
     );
