@@ -9,18 +9,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  smooth_page_indicator:
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_lints: ^2.0.0
   google_fonts:
   google_nav_bar:
   shared_preferences:
   material_design_icons_flutter:
   url_launcher:
+  smooth_page_indicator:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
